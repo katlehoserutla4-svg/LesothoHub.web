@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <title>Lesotho Hub - Tips</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: whitesmoke;
+      color: black;
+    }
+
+ /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding: 10px 30px;
+    }
+
+    .navbar .logo img {
+        height: 70px; /* bigger logo */
+    }
+
+    .navbar .menu {
+        display: flex;
+        gap: 25px;
+    }
+
+    .navbar .menu a {
+        text-decoration: none;
+        color: darkgreen;
+        font-weight: 500;
+    }
+
+    .navbar .menu a:hover {
+        border-bottom: 2px solid darkgreen;
+    }
+
+    .navbar .right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-outline {
+        padding: 6px 15px;
+        border: 2px solid darkgreen;
+        background: none;
+        color: darkgreen;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-outline:hover {
+        background: darkgreen;
+        color: white;
+    }
+
+    .btn-filled {
+        padding: 6px 15px;
+        border: none;
+        background: darkgreen;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-filled:hover {
+        background: #006600;
+    }
+
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 30px 20px;
+      background-color: honeydew;
+    }
+    .header h1 {
+      color: darkgreen;
+      margin-bottom: 10px;
+    }
+    .header p {
+      color: dimgray;
+      font-size: 16px;
+    }
+
+    /* Tips Section */
+    .tips-list {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    .tip {
+      background: white;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    .tip h2 {
+      margin: 0 0 6px;
+      color: darkgreen;
+    }
+    .tip p {
+      margin: 0;
+      color: dimgray;
+      font-size: 14px;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: darkgreen;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+
+    /* ----- Media Queries for Responsiveness ----- */
+
+/* Tablets: max width 1024px */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap; /* Stack logo/menu if needed */
+    padding: 10px 20px;
+  }
+  .navbar .menu {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero, .head, .header {
+    padding: 30px 15px;
+  }
+  .business-grid, .categories {
+    gap: 15px;
+  }
+  .register-block {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/* Phones: max width 600px */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  .navbar .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar .right {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero h1, .head h1, .header h1 {
+    font-size: 22px;
+  }
+  .hero p, .head p, .header p {
+    font-size: 14px;
+  }
+  .business-grid, .categories {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+  form, .register-logo, .contact-form {
+    width: 100%; /* Form full width */
+    padding: 15px;
+  }
+  .contact-form input, .contact-form textarea, form input, form select, form textarea {
+    width: 100%;
+  }
+  .video-block video {
+    height: 250px; /* smaller video */
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo"><img src="LSHUB.png" alt="Lesotho Hub Logo"></div>
+    <div class="menu">
+     <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="business.html">Businesses</a>
+      <a href="tips.html">Tips</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="right">
+      <button class="btn-outline">Sign In</button>
+      <button class="btn-filled">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Agribusiness Tips & Guidance</h1>
+    <p>Explore useful tips and insights to grow and manage your agribusiness effectively.</p>
+  </div>
+
+  <!-- Tips Content -->
+  <div class="tips-list">
+
+    <div class="tip">
+      <h2>Grain Management</h2>
+      <p>Focus on proper grain storage, handling, and marketing to reduce waste and maximize returns.</p>
+    </div>
+
+    <div class="tip">
+      <h2>Equipment</h2>
+      <p>Invest in mechanised tools and equipment to save time and increase efficiency on your farm.</p>
+    </div>
+
+    <div class="tip">
+      <h2>Milling</h2>
+      <p>Explore milling opportunities such as processing maize and wheat to add value to your crops.</p>
+    </div>
+
+    <div class="tip">
+      <h2>Animal Feeds</h2>
+      <p>Ensure your livestock get balanced nutrition by sourcing or producing quality animal feeds.</p>
+    </div>
+
+    <div class="tip">
+      <h2>Financial Solutions</h2>
+      <p>Look into financing, insurance, and savings options to protect and grow your agribusiness.</p>
+    </div>
+
+    <div class="tip">
+      <h2>Retail</h2>
+      <p>Expand your reach by selling through local shops, markets, and digital platforms.</p>
+    </div>
+
+    <div class="tip">
+      <h2>Farmer Development</h2>
+      <p>Take part in training programs to improve your farming knowledge and business skills.</p>
+    </div>
+
+    <div class="tip">
+      <h2>Connect</h2>
+      <p>Use mobile and digital tools to stay informed, access markets, and communicate with buyers.</p>
+    </div>
+
+    <div class="tip">
+      <h2>Logistics</h2>
+      <p>Partner with reliable transport services to move your products safely and on time.</p>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2025 Lesotho Hub. All rights reserved.</p>
+  </div>
+
+</body>
+</html>
+ 

@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial scale=1.0">
+  <title>Lesotho Hub - Businesses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: darkslategray;
+    }
+
+   /* Navbar */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: white;
+        padding: 10px 30px;
+    }
+
+    .navbar .logo img {
+        height: 70px; /* bigger logo */
+    }
+
+    .navbar .menu {
+        display: flex;
+        gap: 25px;
+    }
+
+    .navbar .menu a {
+        text-decoration: none;
+        color: darkgreen;
+        font-weight: 500;
+    }
+
+    .navbar .menu a:hover {
+        border-bottom: 2px solid darkgreen;
+    }
+
+    .navbar .right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .btn-outline {
+        padding: 6px 15px;
+        border: 2px solid darkgreen;
+        background: none;
+        color: darkgreen;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-outline:hover {
+        background: darkgreen;
+        color: white;
+    }
+
+    .btn-filled {
+        padding: 6px 15px;
+        border: none;
+        background: darkgreen;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .btn-filled:hover {
+        background: #006600;
+    }
+
+    /* Header block for businesses */
+    .head {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: honeydew;
+    }
+    .head h1 { 
+      margin: 0 0 10px; 
+      color: darkgreen;
+   }
+    .head p { 
+      margin: 0;
+   }
+
+    /* Business grid */
+    .business-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .business-card {
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 15px;
+    }
+
+    .business-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+    .business-card h3 { 
+      margin: 5px 0; 
+      color: darkgreen;
+   }
+    .business-card p { 
+      margin: 0; 
+      color: dimgray; 
+      font-size: 14px; 
+  }
+
+    /* Registration block */
+    .register-block {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 30px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    form, .register-logo {
+      flex: 1 1 300px;
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    form h2 { 
+      color: darkgreen; 
+      margin-top: 0; 
+    }
+
+    form label { 
+      display: block; 
+      margin: 10px 0 4px; 
+      font-weight: bold; 
+    }
+    form input, form select, form textarea {
+      width: 95%; padding: 8px 10px;
+       border-radius: 6px; 
+       border: 1px solid gray; 
+       font-size: 14px;
+    }
+    form textarea { 
+      resize: vertical;
+   }
+    form button { 
+      margin-top: 12px; 
+  }
+
+    .register-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .register-logo img { 
+      max-width: 100%; 
+      height: auto;
+   }
+
+    /* Footer */
+    footer {
+      background-color: darkgreen;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* ----- Media Queries for Responsiveness ----- */
+
+/* Tablets: max width 1024px */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap; /* Stack logo/menu if needed */
+    padding: 10px 20px;
+  }
+  .navbar .menu {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero, .head, .header {
+    padding: 30px 15px;
+  }
+  .business-grid, .categories {
+    gap: 15px;
+  }
+  .register-block {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/* Phones: max width 600px */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  .navbar .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar .right {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero h1, .head h1, .header h1 {
+    font-size: 22px;
+  }
+  .hero p, .head p, .header p {
+    font-size: 14px;
+  }
+  .business-grid, .categories {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+  form, .register-logo, .contact-form {
+    width: 100%; /* Form full width */
+    padding: 15px;
+  }
+  .contact-form input, .contact-form textarea, form input, form select, form textarea {
+    width: 100%;
+  }
+  .video-block video {
+    height: 250px; /* smaller video */
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="logo"><img src="LSHUB.png" alt="Lesotho Hub Logo"></div>
+    <div class="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="business.html">Businesses</a>
+      <a href="tips.html">Tips</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+    <div class="right">
+      <button class="btn-outline">Sign In</button>
+      <button class="btn-filled">Sign Up</button>
+    </div>
+  </div>
+
+  <!-- Hero -->
+  <section class="head">
+    <h1>Our Farmers & Agribusinesses</h1>
+    <p>Discover local farmers and businesses across Lesotho.</p>
+  </section>
+
+  <!-- Business Grid -->
+  <section class="business-grid">
+    <div class="business-card">
+      <img src="f3.jpeg" alt="Crop Farmers">
+      <h3>Green Fields Farm</h3>
+      <p>Crop Farming - Maseru</p>
+    </div>
+
+    <div class="business-card">
+      <img src="f2.jpeg" alt="Livestock Farmers">
+      <h3>Mokhotlong Livestock</h3>
+      <p>Livestock - Mokhotlong</p>
+    </div>
+
+    <div class="business-card">
+      <img src="f4.jpeg" alt="Dairy Farmers">
+      <h3>Highland Dairy Co-op</h3>
+      <p>Dairy - Berea</p>
+    </div>
+
+    <div class="business-card">
+      <img src="f5.jpeg" alt="Poultry Farmers">
+      <h3>Basotho Poultry</h3>
+      <p>Poultry - Leribe</p>
+    </div>
+  </section>
+
+  <!-- Registration Block -->
+  <section class="register-block">
+    <form>
+      <h2>Register Your Agribusiness</h2>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Your Name">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="you@example.com">
+
+      <label for="business">Business Name</label>
+      <input type="text" id="business" placeholder="Business Name">
+
+      <label for="category">Category</label>
+      <select id="category">
+        <option>Crop</option>
+        <option>Livestock</option>
+        <option>Dairy</option>
+        <option>Poultry</option>
+        <option>Mixed</option>
+      </select>
+
+      <label for="message">Details</label>
+      <textarea id="message" rows="4" placeholder="Tell us about your business"></textarea>
+
+      <button type="submit" class="btn-filled">Submit</button>
+    </form>
+
+    <div class="register-logo">
+      <img src="LSHUB.png" alt="Lesotho Hub Logo">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Lesotho Hub. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+

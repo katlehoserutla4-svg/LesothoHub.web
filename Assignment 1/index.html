@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Lesotho Hub - Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: whitesmoke;
+            color: darkgrey;
+        }
+
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            padding: 10px 30px;
+        }
+
+        .navbar .logo img {
+            height: 70px;
+        }
+
+        .navbar .menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar .menu a {
+            text-decoration: none;
+            color: darkgreen;
+            font-weight: 500;
+        }
+
+        .navbar .menu a:hover {
+            border-bottom: 2px solid darkgreen;
+        }
+
+        .navbar .right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .btn-outline {
+            padding: 6px 15px;
+            border: 2px solid darkgreen;
+            background: none;
+            color: darkgreen;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-outline:hover {
+            background: darkgreen;
+            color: white;
+        }
+
+        .btn-filled {
+            padding: 6px 15px;
+            border: none;
+            background: darkgreen;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-filled:hover {
+            background: darkgreen;
+        }
+
+        /* Full-width blocks */
+        .block {
+            width: 100%;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+
+        /* Video Block */
+        .video-block {
+            background-color: white;
+            text-align: center;
+        }
+
+        .video-block h2 {
+            color: darkgreen;
+            margin-bottom: 15px;
+        }
+
+        .video-block video {
+            border-radius: 6px;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+            width: 100%;
+            height: 500px;
+        }
+
+        /* Welcome Block */
+        .welcome-block {
+            background-color: white;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+        }
+
+        .welcome-block h2 {
+            color: darkgreen;
+        }
+
+        /* Categories Block */
+        .categories-block {
+            background-color: #e6f2e6;
+            border-radius: 8px;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0px 0px 6px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 15px;
+            transition: 0.3s;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .category-card h3 {
+            color: darkgreen;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: darkgreen;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+    /* ----- Media Queries for Responsiveness ----- */
+
+/* Tablets: max width 1024px */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-wrap: wrap; /* Stack logo/menu if needed */
+    padding: 10px 20px;
+  }
+  .navbar .menu {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero, .head, .header {
+    padding: 30px 15px;
+  }
+  .business-grid, .categories {
+    gap: 15px;
+  }
+  .register-block {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+/* Phones: max width 600px */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+  }
+  .navbar .menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .navbar .right {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .hero h1, .head h1, .header h1 {
+    font-size: 22px;
+  }
+  .hero p, .head p, .header p {
+    font-size: 14px;
+  }
+  .business-grid, .categories {
+    grid-template-columns: 1fr; /* One card per row */
+  }
+  form, .register-logo, .contact-form {
+    width: 100%; /* Form full width */
+    padding: 15px;
+  }
+  .contact-form input, .contact-form textarea, form input, form select, form textarea {
+    width: 100%;
+  }
+  .video-block video {
+    height: 250px; /* smaller video */
+  }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="LSHUB.png" alt="Lesotho Hub Logo">
+        </div>
+
+        <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="business.html">Businesses</a>
+            <a href="tips.html">Tips</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+
+        <div class="right">
+            <button class="btn-outline">Sign In</button>
+            <button class="btn-filled">Sign Up</button>
+        </div>
+    </div>
+
+    <!-- Video Block -->
+    <div class="block video-block">
+        <h2>A new world of agriculture awaits</h2>
+        <video autoplay muted loop playsinline>
+            <source src="farmer.mp4" type="video/mp4" style="height: 70px;" style="width: 150px;">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <!-- Welcome Block -->
+    <div class="block welcome-block">
+        <h2>Welcome to Lesotho Hub</h2>
+        <p>
+            Lesotho Hub helps farmers connect directly with buyers.  
+            Our platform allows farmers to advertise their products,  
+            reach more customers, and grow their businesses.  
+        </p>
+        <p>
+            Browse through categories to discover different farmers  
+            and their products.
+        </p>
+    </div>
+
+    <!-- Categories Block -->
+    <div class="block categories-block">
+        <h2 style="text-align:center; color:darkgreen;">Farmer Categories</h2>
+        <div class="categories">
+            <div class="category-card">
+                <img src="crop.jpeg" alt="Crop Farmers">
+                <h3>Crop Farmers</h3>
+            </div>
+            <div class="category-card">
+                <img src="livestock.jpeg" alt="Livestock Farmers">
+                <h3>Livestock Farmers</h3>
+            </div>
+            <div class="category-card">
+                <img src="dairy.jpeg" alt="Dairy Farmers">
+                <h3>Dairy Farmers</h3>
+            </div>
+            <div class="category-card">
+                <img src="poultry.jpeg" alt="Poultry Farmers">
+                <h3>Poultry Farmers</h3>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lesotho Hub. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
